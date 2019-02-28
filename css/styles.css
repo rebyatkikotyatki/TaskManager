@@ -1,0 +1,25 @@
+.lvTasks{
+    margin-top: 30px;
+    width: 500px;
+    height: 500px;
+    background-color: #bce8f1;
+    overflow: auto;
+}
+.lvDescr{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 620px;
+    height: 500px;
+    background-color: #bce8f1;
+}
+
+.taskAdded{
+    background-color: white !important;
+}
+.taskCb{
+    background-color: white !important;
+
+}
+.taskGroup{
+    margin: 30px;
+}
