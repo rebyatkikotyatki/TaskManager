@@ -75,7 +75,7 @@ if (isset($data['do_login'])) {
 		  </div>
 		  <div class="form-group row">
 			  <input type="password" class="form-control" name="password" placeholder="Пароль" required/>
-                  <button class="mt-5 mb-3 btn btn-lg btn-dark btn-block" name="do_login" type="submit">Войти</button>
+                  <button class="mt-5 mb-3 btn btn-lg btn-primary btn-block" name="do_login" type="submit">Войти</button>
 		  </div>
     </div>
 </div>

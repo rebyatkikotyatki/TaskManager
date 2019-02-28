@@ -98,7 +98,7 @@ if (isset($data['do_signup'])) {
 
 		  <div class="form-group row">
 			<div class="col-sm-12">
-			   <button class="mt-5 mb-3 btn btn-lg btn-dark btn-block" name="do_signup" id="submit" type="submit">Зарегистрироваться</button>
+			   <button class="mt-5 mb-3 btn btn-lg btn-primary btn-block" name="do_signup" id="submit" type="submit">Зарегистрироваться</button>
 			</div>
 		  </div>
     </div>

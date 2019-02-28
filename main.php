@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<!--    запрет кэширования-->
+    <meta http-equiv="Cache-Control" content="no-cache">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-
     <title>TaskManager</title>
 
 
@@ -49,14 +50,15 @@
     <div class="row">
         <div class="col-md-5">
             <div class="lvTasks">
-                <form action="" method="post" name="lvTasksForm">
-                    <div id="dynamicFields">
-                        <div class="input-group input-group-lg">
-                            <input type="text" required class="form-control" placeholder="Add a new task here...">
+                <form action="" method="post" name="lvTasksForm" id="lvTasksForm">
+                        <h2 class="lvTasksHeader">Список задач:</h2>
+                        <div class="input-group input-group-lg taskTitle">
+                            <input type="text" required class="form-control" id="task" name="newTask" placeholder="Добавьте новую задачу...">
                             <span class="input-group-btn">
-                                <button id="btnAddTask" class="btn btn-default" type="submit">Add!</button>
+                                <button id="btnAddTask" class="btn btn-info" type="submit">Add!</button>
                             </span>
                         </div>
+                    <div id="dynamicFields">
 <!--                        <div class="input-group input-group-lg">-->
 <!--                            <span class="input-group-addon taskCb">-->
 <!--                            <input type="checkbox" >-->
