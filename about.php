@@ -1,30 +1,12 @@
 <?php
-require "db.php";
 
 $data = $_POST;
 if (isset($data['do_login'])) {
-    $errors = array();
-    $user = R::findOne('users', 'email=?', array($data['email']
-    ));
-    if ($user) {
-        if (password_verify($data['password'], $user->password)) {
-            //логиним пользователя
-            $_SESSION['logged_user'] = $user;
-            //перенаправление на главную страницу
-            echo '<meta http-equiv="refresh" content="0; url=main.php">';
+    echo '<meta http-equiv="refresh" content="0; url=main.php">';
 
-        } else {
-            $errors[] = 'Неправильно введен пароль!';
-        }
-    } else {
-        $errors[] = 'Пользователь с таким email не найден';
-    }
-    if (!empty($errors)) {
-
-        echo '<div  style="color: red; vertical-align: bottom;">'.array_shift($errors).'</div><hr>';
-    }
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,16 +15,15 @@ if (isset($data['do_login'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Вход в учётную запись</title>
+    <title>О нас</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
+<!--    <link href="css/register.css" rel="stylesheet">-->
 
 </head>
-
-<body>
 
 <!-- Static navbar -->
 <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -60,26 +41,38 @@ if (isset($data['do_login'])) {
             <ul class="nav navbar-nav">
                 <li><a href="about.php">About</a></li>
             </ul>
-            <form class="navbar-form navbar-right" action="registration.php">
-                <button type="submit" class="btn btn-success"'>Регистрация</button>
+            <form class="navbar-form navbar-right" action="index.php">
+                <button type="submit" class="btn btn-success"'>Авторизоваться</button>
             </form>
         </div><!--/.nav-collapse -->
     </div>
 </div>
 
-<form action="index.php" method="post">
-<div class="my-container container table-container content-box center">
-    <div id="signinAction" class="form-signin">
-        <h1 class="h3 mb-3 py-3 font-weight-normal" id="signinText">Вход в учётную запись</h1>
-		<div class="form-group row">
-			  <input type="email" class="form-control" name="email" placeholder="Email" required autofocus>
-		  </div>
-		  <div class="form-group row">
-			  <input type="password" class="form-control" name="password" placeholder="Пароль" required/>
-                  <button class="mt-5 mb-3 btn btn-lg btn-primary btn-block" name="do_login" type="submit">Войти</button>
-		  </div>
-    </div>
+<form>
+<div id="about">
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="img-circle" src="img/bg0.jpg" width="140" height="140">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img-circle" src="img/bg0.jpg" width="140" height="140">
+                <h2>Heading</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img-circle" src="img/bg0.jpg" width="140" height="140">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
 </div>
+</div>>
+
 </form>
 <div id="footer">
     <div class="container">
@@ -89,7 +82,6 @@ if (isset($data['do_login'])) {
     </div>
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
