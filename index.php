@@ -19,12 +19,9 @@ if (isset($data['do_login'])) {
     } else {
         $errors[] = 'Пользователь с таким email не найден';
     }
-    if (!empty($errors)) {
-
-        echo '<div  style="color: red; vertical-align: bottom;">'.array_shift($errors).'</div><hr>';
-    }
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -67,15 +64,22 @@ if (isset($data['do_login'])) {
     </div>
 </div>
 
+
 <form action="index.php" method="post">
 <div class="my-container container table-container content-box center">
     <div id="signinAction" class="form-signin">
-        <h1 class="h3 mb-3 py-3 font-weight-normal" id="signinText">Вход в учётную запись</h1>
+        <h1 class="h3 mb-3 py-3 font-weight-normal" id="signinText"><p class="text-center">Вход в учётную запись</p></h1>
 		<div class="form-group row">
 			  <input type="email" class="form-control" name="email" placeholder="Email" required autofocus>
 		  </div>
 		  <div class="form-group row">
 			  <input type="password" class="form-control" name="password" placeholder="Пароль" required/>
+              <?php
+              if (!empty($errors)) {
+
+                  echo '<div class="alert alert-danger" role="alert"><p class="text-center">'.array_shift($errors).'</p></div>';
+              }
+              ?>
                   <button class="mt-5 mb-3 btn btn-lg btn-primary btn-block" name="do_login" type="submit">Войти</button>
 		  </div>
     </div>
