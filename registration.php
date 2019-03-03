@@ -38,7 +38,9 @@ if (isset($data['do_signup'])) {
     <title>Регистрация учётной записи</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/reg.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
 <!--    <link href="css/register.css" rel="stylesheet">-->
 
 </head>
@@ -58,7 +60,7 @@ if (isset($data['do_signup'])) {
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#about">About</a></li>
+                <li><a href="about.php">About</a></li>
             </ul>
             <form class="navbar-form navbar-right" action="index.php">
                 <button type="submit" class="btn btn-success"'>Авторизоваться</button>
@@ -88,7 +90,6 @@ if (isset($data['do_signup'])) {
         </div>
 
         <div class="form-group row">
-
 			  <input type="password" class="form-control" name="password" placeholder="Пароль" >
         </div>
 
@@ -104,7 +105,13 @@ if (isset($data['do_signup'])) {
     </div>
 </div>
 </form>
-	
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">Спроектирован и построен авторами: <a href="https://www.instagram.com/igorgilew/""><i class="fa fa-instagram" aria-hidden="true"></i> </a> и <a href="https://www.instagram.com/frolovaek/""><i class="fa fa-instagram" aria-hidden="true"></i> </a> </p>
+        <p class="text-muted">Поддержкой занимается: <a href="https://vk.com/ilya_zhuromskiy""><i class="fa fa-vk" aria-hidden="true"></i> </a> </p>
+        <p class="text-muted">  ПГНИУ, 2019 </p>
+    </div>
+</div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>

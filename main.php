@@ -14,6 +14,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
     <link href="css/styles.css" rel="stylesheet">
 
 
@@ -74,29 +75,29 @@
                 </form>
             </div>
         </div>
-
+<!--        There Task Description-->
         <div class="col-md-7">
             <div class="lvDescr">
                 <form action="" method="post">
-                    <div class="input-group input-group-lg taskTitle">
-                        <input type="text" required class="form-control" id="task" name="newTask" placeholder="tut budet title zadachi">
+                    <div class="form-group-lg">
+                        <input type="text" class="form-control dsTasktitle" name="dsTaskTitle" placeholder="Название задачи">
+                        <textarea class="form-control dsTasktA" name="dsTaskDs" rows="5" placeholder="Описание задачи"></textarea>
                     </div>
-                    <div class="taskDescription">
-                        <label>
-                            <textarea type="text" placeholder="tut budet opisanie zadachi"></textarea>
-                        </label>
+                    <div class="input-group-lg dpDeadline">
+                        <span input-group-addon><label>Крайний срок выполнения</label></span>
+                        <input type="date" class="form-control" id="date" name="date" placeholder="Дата" required>
                     </div>
-                    <div class="input-group input-group-lg taskTags">
-                        <input type="text" required class="form-control" id="tags" name="newTag" placeholder="tut budut tags">
-                    </div>
-                    <div>
-                        <div class="input-group input-group-lg taskTitle">
-                            <input type="text" required class="form-control" id="task" name="newTask" placeholder="Добавьте новую подзадачу...">
-                            <span class="input-group-btn">
-                                <button id="btnAddTask" class="btn btn-info" type="submit">Add!</button>
+
+                    <div class="input-group subTaskTitle">
+                        <input type="text" required class="form-control" id="subtask" name="newsubtask" placeholder="Добавьте подзадачу...">
+                        <span class="input-group-btn">
+                                <button id="btnAddSubtask" class="btn btn-info" type="submit">Add!</button>
                             </span>
-                        </div>
                     </div>
+                    <div id="dynamicSubTasks">
+
+                    </div>
+
                 </form>
             </div>
         </div>
@@ -114,6 +115,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/forTaskView.js"></script>
+<script src="js/forDescrTask.js"></script>
 
 
 </body>

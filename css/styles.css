@@ -14,10 +14,11 @@
     width: 100%;
     margin-top: 30px;
     margin-left: 20px;
-    max-width: 620px;
+    max-width: 580px;
     height: 500px;
     background-color: #cccccc4d;
     border-radius: 5px;
+    overflow: auto;
 }
 .lvTasksHeader{
     margin-left: 10px;
@@ -35,4 +36,36 @@
 }
 .taskGroup{
     margin: 30px;
+}
+.dsTasktitle{
+    width: 100%;
+    max-width: 580px;
+
+}
+.dsTasktA{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 100%;
+    max-width: 550px;
+}
+.dpDeadline{
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.subTaskTitle{
+    width: 100%;
+    max-width: 530px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.subTaskAdded{
+    background-color: white !important;
+    width: 100%;
+    max-width: 530px;
+}
+.addedSubtask{
+    max-width: 500px;
+    margin-left: 30px !important;
 }
