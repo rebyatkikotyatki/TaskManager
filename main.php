@@ -77,7 +77,27 @@
 
         <div class="col-md-7">
             <div class="lvDescr">
-
+                <form action="" method="post">
+                    <div class="input-group input-group-lg taskTitle">
+                        <input type="text" required class="form-control" id="task" name="newTask" placeholder="tut budet title zadachi">
+                    </div>
+                    <div class="taskDescription">
+                        <label>
+                            <textarea type="text" placeholder="tut budet opisanie zadachi"></textarea>
+                        </label>
+                    </div>
+                    <div class="input-group input-group-lg taskTags">
+                        <input type="text" required class="form-control" id="tags" name="newTag" placeholder="tut budut tags">
+                    </div>
+                    <div>
+                        <div class="input-group input-group-lg taskTitle">
+                            <input type="text" required class="form-control" id="task" name="newTask" placeholder="Добавьте новую подзадачу...">
+                            <span class="input-group-btn">
+                                <button id="btnAddTask" class="btn btn-info" type="submit">Add!</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
