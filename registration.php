@@ -22,7 +22,6 @@ if (isset($data['do_signup'])) {
         R::store($user);
         echo '<div  style="color: green; vertical-align: bottom;">успех</div>';
     } else {
-        //вот тут косяк
         echo '<div  style="color: red; vertical-align: bottom;">'.array_shift($errors).'</div>';
     }
 }

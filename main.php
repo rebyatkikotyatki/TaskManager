@@ -1,3 +1,10 @@
+<?php
+require "db.php";
+$loggedUser = $_SESSION['logged_user'];
+$user = R::findOne('users', 'email=?', array($loggedUser['email']));
+$tasks = R::find('tasks', 'userid_id=?', array($user->id));
+$text = $user->name;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +30,9 @@
 </head>
 
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/forTaskView.js"></script>
 
 <!-- Static navbar -->
 <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -51,7 +61,7 @@
     <div class="row">
         <div class="col-md-5">
             <div class="lvTasks">
-                <form action="" method="post" name="lvTasksForm" id="lvTasksForm">
+                <form method="post" name="lvTasksForm" id="lvTasksForm">
                         <h2 class="lvTasksHeader">Список задач:</h2>
                         <div class="input-group input-group-lg taskTitle">
                             <input type="text" required class="form-control" id="task" name="newTask" placeholder="Добавьте новую задачу...">
@@ -71,6 +81,18 @@
 <!--                                </button>-->
 <!--                            </span>-->
 <!--                        </div> /input-group -->
+                        <?php
+                        foreach ($tasks as $task)
+                        {
+                            echo '<script type="text/javascript">',
+                            'addTaskField(\''.$task->title.'\',\''.$task.'\');',
+
+                            '</script>'
+                            ;
+                        }
+                        ?>
+
+
                     </div>
                 </form>
             </div>
@@ -78,10 +100,10 @@
 <!--        There Task Description-->
         <div class="col-md-7">
             <div class="lvDescr">
-                <form action="" method="post">
+                <form  method="post">
                     <div class="form-group-lg">
-                        <input type="text" class="form-control dsTasktitle" name="dsTaskTitle" placeholder="Название задачи">
-                        <textarea class="form-control dsTasktA" name="dsTaskDs" rows="5" placeholder="Описание задачи"></textarea>
+                        <input type="text" class="form-control dsTasktitle" id="dstasktitle" name="dsTaskTitle" placeholder="Название задачи">
+                        <textarea class="form-control dsTasktA" name="dsTaskDs" id="dstaskdesc" rows="5" placeholder="Описание задачи"></textarea>
                     </div>
                     <div class="input-group-lg dpDeadline">
                         <span input-group-addon><label>Крайний срок выполнения</label></span>
@@ -112,8 +134,6 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="js/forTaskView.js"></script>
 <script src="js/forDescrTask.js"></script>
 
