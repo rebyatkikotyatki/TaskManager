@@ -114,9 +114,10 @@ if (isset($data['do_signup'])) {
     <div class="container">
         <p class="text-muted">Спроектирован и построен авторами: <a href="https://www.instagram.com/igorgilew/""><i class="fa fa-instagram" aria-hidden="true"></i> </a> и <a href="https://www.instagram.com/frolovaek/""><i class="fa fa-instagram" aria-hidden="true"></i> </a> </p>
         <p class="text-muted">Поддержкой занимается: <a href="https://vk.com/ilya_zhuromskiy""><i class="fa fa-vk" aria-hidden="true"></i> </a> </p>
-        <p class="text-muted">  ПГНИУ, 2019 </p>
+        <p class="text-muted">ПГНИУ, 2019 </p>
     </div>
 </div>
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
