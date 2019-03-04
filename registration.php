@@ -12,7 +12,6 @@ if (isset($data['do_signup'])) {
     if (R::count('users', 'email = ?', array($data['email']))>0) {
         $errors[] = 'Пользователь с таким email уже есть';
     }
-
     if (empty($errors)) {
         $user = R::dispense('users');
         $user -> surname = $data['surname'];
@@ -20,9 +19,9 @@ if (isset($data['do_signup'])) {
         $user -> email = $data['email'];
         $user -> password = password_hash($data['password'], PASSWORD_DEFAULT);
         R::store($user);
-        echo '<div  style="color: green; vertical-align: bottom;">успех</div>';
-    } else {
-        echo '<div  style="color: red; vertical-align: bottom;">'.array_shift($errors).'</div>';
+        if (empty($errors)) {
+            echo '<meta http-equiv="refresh" content="0; url=main.php">';
+        }
     }
 }
 ?>
@@ -62,11 +61,14 @@ if (isset($data['do_signup'])) {
                 <li><a href="about.php">About</a></li>
             </ul>
             <form class="navbar-form navbar-right" action="index.php">
+
                 <button type="submit" class="btn btn-success"'>Авторизоваться</button>
             </form>
         </div><!--/.nav-collapse -->
     </div>
 </div>
+
+
 <form action="/registration.php" method="post">
 <div class="my-container container table-container content-box center">
     <div id="registrationAction" class="form-signin">
@@ -95,11 +97,15 @@ if (isset($data['do_signup'])) {
         <div class="form-group row">
 			  <input type="password" class="form-control" name="confirmPassword" placeholder="Подтвердите пароль">
         </div>
-
+        <?php
+        if (!empty($errors)) {
+            echo '<div class="alert alert-danger" role="alert"><p class="text-center">'.array_shift($errors).'</p></div>';
+        }
+        ?>
 		  <div class="form-group row">
-			<div class="col-sm-12">
+
 			   <button class="mt-5 mb-3 btn btn-lg btn-primary btn-block" name="do_signup" id="submit" type="submit">Зарегистрироваться</button>
-			</div>
+
 		  </div>
     </div>
 </div>
@@ -108,9 +114,10 @@ if (isset($data['do_signup'])) {
     <div class="container">
         <p class="text-muted">Спроектирован и построен авторами: <a href="https://www.instagram.com/igorgilew/""><i class="fa fa-instagram" aria-hidden="true"></i> </a> и <a href="https://www.instagram.com/frolovaek/""><i class="fa fa-instagram" aria-hidden="true"></i> </a> </p>
         <p class="text-muted">Поддержкой занимается: <a href="https://vk.com/ilya_zhuromskiy""><i class="fa fa-vk" aria-hidden="true"></i> </a> </p>
-        <p class="text-muted">  ПГНИУ, 2019 </p>
+        <p class="text-muted">ПГНИУ, 2019 </p>
     </div>
 </div>
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>

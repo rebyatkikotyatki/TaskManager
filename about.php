@@ -24,7 +24,6 @@ if (isset($data['do_login'])) {
 <!--    <link href="css/register.css" rel="stylesheet">-->
 
 </head>
-
 <!-- Static navbar -->
 <div class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
@@ -50,39 +49,34 @@ if (isset($data['do_login'])) {
 
 <div id="about">
     <div class="container marketing">
-
+        <div id="a1">
+            <div class="text-center">
+                <h2>Как все успеть?</h2>
+                <p>Менеджеры задач всегда остаются актуальными помощниками в наших ежедневных делах, будь то работа над проектом или покупка продуктов к ужину.</p>
+                <p>Жизнь может казаться ошеломительной, но ей не обязательно такой быть. TaskManager позволяет отслеживать все задачи в одном месте, чтобы вам было проще выполнять задуманное, сохраняя душевный покой. </p>
+            </div>
+        </div>
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
                 <img class="img-circle" src="img/bg0.jpg" width="140" height="140">
-                <h2>Тут должна быть инфа о сайте</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                <h2>Невозможно забыть</h2>
+                <p>Сервис позволяет максимально подробно описать вашу задачу, установить срок ее реализации, а также выделить конкретные подзадачи</p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="img-circle" src="img/bg0.jpg" width="140" height="140">
-                <h2>И тут</h2>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <h2>Удобный интерфейс</h2>
+                <p>Интерфейс сайта должен обеспечивает наглядное, интуитивно понятное представление размещенной на нем информации, быстрый и логичный переход к разделам и страницам.</p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="img-circle" src="img/bg0.jpg" width="140" height="140">
-                <h2>И тут</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <h2>Бесплатно!</h2>
+                <p>Только сейчас вы можете стать частью нашей команды совершенно бесплатно! Оптимизируйте свою жизнь и не платите за подписку!</p>
             </div><!-- /.col-lg-4 -->
         </div>
-
-        <h2>Что мы использовали?</h2>
-        <p> Тут много текста про технологииТут много текста про технологииТут много текста про технологииТут много текста про технологииТут много текста про технологии
-            Тут много текста про технологииТут много текста про технологииТут много текста про технологииТут много текста про технологии
-            Тут много текста про технологииТут много текста про технологииТут много текста про технологии
-            Тут много текста про технологииТут много текста про технологииТут много текста про технологииТут много текста про технологии
-            Тут много текста про технологииТут много текста про технологииТут много текста про технологииТут много текста про технологииТут много текста про технологииТут много текста про технологии
-            Тут много текста про технологииТут много текста про технологииТут много текста про технологии
-        </p>
-
     </div>
 </div>
 
-</form>
 <div id="footer">
     <div class="container">
         <p class="text-muted">Спроектирован и построен авторами: <a href="https://www.instagram.com/igorgilew/""><i class="fa fa-instagram" aria-hidden="true"></i> </a> и <a href="https://www.instagram.com/frolovaek/""><i class="fa fa-instagram" aria-hidden="true"></i> </a> </p>
